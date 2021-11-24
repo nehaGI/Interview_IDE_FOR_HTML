@@ -1,0 +1,19 @@
+let a="ABC_123_A_10_20";
+
+function adder(str){
+    let arr = str.split('_');
+   
+    let sum = arr.reduce((acc,val) => {
+       
+       val = parseInt(val);
+      
+       if(!isNaN(val)){
+        acc=acc +val;           
+       }
+       return  acc;
+    },0);
+    
+   return sum;
+}
+
+console.log(adder(a));
